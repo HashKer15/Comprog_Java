@@ -22,9 +22,12 @@ public class JDV_Array {
         int num = input.nextInt();
         String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
         int i;
-        for (i = num; i < cars.length; i++) {
+            for (i = num; i < cars.length; i++) {
             System.out.println("You Choose " + cars[i]);
             break;
+        
         }
+
+        
     }
 }
