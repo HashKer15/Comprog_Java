@@ -22,7 +22,7 @@ public class JDV_CountingOddEven {
         int num = input.nextInt();
         int odd = 0, even = 0;
 
-        for (int i = 1; i <= num; i++) {
+        for (int i = 1; i < num; i++) {
             System.out.print(i + ") ");
             int num2 = input.nextInt();
 
