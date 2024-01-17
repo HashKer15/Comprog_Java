@@ -9,6 +9,8 @@ package jdv_multidimensional;
  *
  * @author user23
  */
+import java.util.Scanner;
+import java.util.Arrays;
 
 public class JDV_Multidimensional {
 
@@ -17,13 +19,24 @@ public class JDV_Multidimensional {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int name[][] = {{1,2,3,4,5},{6,7,8,9,10}};
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter number of Arrays: ");
+        int numArr = input.nextInt();
+        int [][] array = new int[numArr][];
         
-        for(int i = 0;i < 2;i++){
-            for(int j = 0;j<5;j++){
-                System.out.print(name[i][j] + " ");
+        for(int i=0; i<numArr;i++){
+            System.out.print("\nEnter how many elements you want to store in array "+"["+i+"]: ");
+            int arraysize = input.nextInt();
+            array[i] = new int[arraysize];
+            for(int j = 0; j <arraysize; j++){
+                System.out.print("["+(j+1)+"]");
+                array[i][j] = input.nextInt();
             }
-            System.out.println();
+        }
+        System.out.println("\nThe Elements entered");
+        for(int i=0; i<numArr;i++){
+            Arrays.sort(array[i]);
+            System.out.println(Arrays.toString(array[i]));
         }
     }
     
